@@ -2,7 +2,7 @@
   "name": "assets",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3000 --strictPort --clearScreen false",
     "build": "vite build"
   },
   "devDependencies": {

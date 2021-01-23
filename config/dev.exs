@@ -8,15 +8,14 @@ use Mix.Config
 # with webpack to recompile .js and .css sources.
 config :vite, ViteWeb.Endpoint,
   http: [port: 4000],
+  static_url: [port: 3000],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
   watchers: [
-    node: [
-      "node_modules/webpack/bin/webpack.js",
-      "--mode",
-      "development",
-      "--watch-stdin",
+    npm: [
+      "run",
+      "dev",
       cd: Path.expand("../assets", __DIR__)
     ]
   ]
